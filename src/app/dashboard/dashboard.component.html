@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        
+<table>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>address</th>
+            <th>date</th>
+            <th>admin</th>
+            <th>manager</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let item of list">
+           <th>{{item.uname}}</th>
+           <th>{{item.address}}</th>
+           <th>{{item.date}}</th>
+           <th>{{item.admin}}</th>
+           <th>{{item.manager}}</th>
+           <th></th>
+        </tr>
+    </tbody>
+</table>
+    </div>
+</div>

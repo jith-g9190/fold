@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row">
+
+
+<h2> {{name}}</h2>
+
+        <form [formGroup]="loginForm" (ngSubmit)="submitClick(task.value)">
+
+    
+                <div>
+                    <input type="text" id="uname" name="uname" formControlName="uname" placeholder="Name" #task>
+                </div><br>
+                <div *ngIf="(this.loginForm.get('uname')?.touched||this.loginForm.get(uname)?.dirty)" class="error">error
+                </div>
+                <div>
+                    <input type="text" id="address" name="address" formControlName="address" placeholder="address" #task>
+                </div><br>
+                <div *ngIf="(this.loginForm.get('address')?.touched||this.loginForm.get(address)?.dirty)" class="error">
+                    error</div>
+    
+                <div>
+                    <input type="date" id="date" name="date" formControlName="date" placeholder="Date of birth" #task>
+                </div><br>
+                <div *ngIf="(this.loginForm.get('date')?.touched||this.loginForm.get(date)?.dirty)" class="error">error
+                </div>
+    
+                <div>
+                    <select>
+                        <option value="">Role</option>
+                        <option value="admin">admin</option>
+                        <option value="manager">manager</option>
+                        <option value="HR">HR</option>
+                        <option value="engineer">engineer</option>
+                    </select>
+                </div><br>
+    
+                <div>
+                    <input type="text" id="phone" name="phone" formControlName="phone" placeholder="Phone" #task>
+                </div><br>
+                <div *ngIf="(this.loginForm.get('phone')?.touched||this.loginForm.get(phone)?.dirty)" class="error">error
+                </div>
+    
+                <div>
+                    <label for="gender">Gender</label>
+                    <input type="radio" name="gender" id="male"><label>male</label>
+                    <input type="radio" name="gender" id="female"><label>Female</label>
+    
+                </div><br>
+                <button class="btn-primary" name="btnclick" type="submit">submit the form</button>
+    
+                <ul *ngFor="let item of list ">
+
+
+          
+          
+                    
+                  </ul>
+    
+
+   
+
+
+
+
+
+
+        </form>
+
+    </div>
+</div>
